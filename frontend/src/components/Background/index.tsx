@@ -6,7 +6,7 @@ import Spinner from '@components/Spinner';
 import classes from './styles.module.scss';
 
 const Background: React.FC = () => {
-    const [vantaEffect, setVantaEffect] = useState();
+    const [vantaEffect, setVantaEffect] = useState<any>(0);
     const myRef = useRef(null);
 
     useEffect(() => {
