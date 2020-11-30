@@ -1,18 +1,20 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap';
+
 html,
 body {
-  height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  scroll-behavior: smooth;
-  margin: 0;
-  overflow: hidden;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    overflow: hidden;
 }
 
 body {
-  padding-left: 55px;
+    padding-left: 55px;
 }
 
 * {
-  outline: none;
+    outline: none;
 }
 
 h1,
@@ -21,44 +23,44 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
-  padding: 0;
-  margin: 0;
-  color: #333;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #333;
 }
 
 h1 {
-  font-size: 65px;
+    font-size: 65px;
 }
 
 h2 {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 h3 {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 h4 {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 h5 {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 a:hover,
 a:focus {
-  text-decoration: none;
-  outline: none;
+    text-decoration: none;
+    outline: none;
 }
 
 li,
 ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
