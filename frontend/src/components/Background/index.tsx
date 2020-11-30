@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import bgHome from 'vanta/dist/vanta.waves.min';
 import * as THREE from 'three';
-import Spinner from '@components/Spinner';
 
 import classes from './styles.module.scss';
 
