@@ -9,14 +9,14 @@ import imageResolve from '@core/helpers/imageResolve';
 import classes from './styles.module.scss';
 
 const PortfolioItem: React.FC<Portfoliointerface> = (props) => {
-    const { title, list, image } = props;
+    const { title, list, image, thumb } = props;
     const [open, setIsOpen] = useState(false);
 
     return (
         <div className={classes.item}>
             <Spinner className={classes.spinner} />
             <Image
-                src={imageResolve(image as string).url() as string}
+                src={imageResolve(thumb as string).url() as string}
                 width={420}
                 height={420}
                 layout="responsive"

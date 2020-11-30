@@ -9,7 +9,13 @@ const Portfolio: React.FC<SectionProps> = (props) => {
     return (
         <div className={classes.portfolio} {...props}>
             {portfolio.map((item, index) => (
-                <PortfolioItem key={index} image={item.image} title={item.title} list={item.list} />
+                <PortfolioItem
+                    key={index}
+                    image={item.image}
+                    thumb={item.thumb}
+                    title={item.title}
+                    list={item.list}
+                />
             ))}
         </div>
     );

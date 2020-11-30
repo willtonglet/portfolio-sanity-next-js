@@ -23,6 +23,7 @@ interface SocialProps {
 
 interface Portfoliointerface {
     image: string;
+    thumb: string;
     title: string;
     list: Array<string>;
 }

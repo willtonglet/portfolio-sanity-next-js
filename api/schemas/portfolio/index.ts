@@ -25,6 +25,19 @@ export default {
       ],
     },
     {
+      title: "Thumb",
+      name: "thumb",
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        {
+          title: "Caption",
+          name: "caption",
+          type: "string",
+        },
+      ],
+    },
+    {
       title: "List",
       name: "list",
       type: "array",

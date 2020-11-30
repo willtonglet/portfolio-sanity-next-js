@@ -1,10 +1,12 @@
-import React, { useState, useRef, useEffect } from 'react';
-import classes from './styles.module.scss';
+import { useState, useRef, useEffect } from 'react';
 import bgHome from 'vanta/dist/vanta.waves.min';
 import * as THREE from 'three';
+import Spinner from '@components/Spinner';
+
+import classes from './styles.module.scss';
 
 const Background: React.FC = () => {
-    const [vantaEffect, setVantaEffect] = useState<any>(0);
+    const [vantaEffect, setVantaEffect] = useState();
     const myRef = useRef(null);
 
     useEffect(() => {
@@ -32,7 +34,12 @@ const Background: React.FC = () => {
         };
     }, [vantaEffect]);
 
-    return <div ref={myRef} className={classes.background} />;
+    return (
+        <div className={classes.background}>
+            <div ref={myRef} className={classes.bg} />
+            <Spinner className={classes.spinner} />
+        </div>
+    );
 };
 
 export default Background;
