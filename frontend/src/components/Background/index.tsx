@@ -37,7 +37,6 @@ const Background: React.FC = () => {
     return (
         <div className={classes.background}>
             <div ref={myRef} className={classes.bg} />
-            <Spinner className={classes.spinner} />
         </div>
     );
 };
