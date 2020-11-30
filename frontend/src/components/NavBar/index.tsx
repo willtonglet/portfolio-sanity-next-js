@@ -13,7 +13,6 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ({ routes, social }) => {
     const [open, setOpen] = useState(false);
-    const [active, setActive] = useState(-1);
     const menu = useRef<HTMLDivElement>(null);
 
     const handleClickOutside = (event: MouseEvent) => {
@@ -33,13 +32,7 @@ const NavBar: React.FC<NavBarProps> = ({ routes, social }) => {
         <aside ref={menu}>
             <div className={classes.navBar}>
                 <div className={classes.logo}>
-                    <a
-                        href="/#home"
-                        onClick={() => {
-                            setOpen(false);
-                            setActive(-1);
-                        }}
-                        aria-label="Logo">
+                    <a href="/#home" onClick={() => setOpen(false)} aria-label="Logo">
                         <Logo />
                     </a>
                 </div>
@@ -60,11 +53,7 @@ const NavBar: React.FC<NavBarProps> = ({ routes, social }) => {
                             <li key={index}>
                                 <NavItem
                                     href={`#${route.slug.current}`}
-                                    onClick={() => {
-                                        setActive(index);
-                                        setOpen(false);
-                                    }}
-                                    className={clsx(active === index && classes.active)}
+                                    onClick={() => setOpen(false)}
                                     aria-label={route.title}>
                                     {route.title}
                                 </NavItem>
