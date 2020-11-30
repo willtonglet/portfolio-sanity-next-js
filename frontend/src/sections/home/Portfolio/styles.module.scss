@@ -24,6 +24,13 @@
         background-color: #000;
         max-height: 15rem;
 
+        .spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         img {
             width: 250%;
             max-width: 250%;

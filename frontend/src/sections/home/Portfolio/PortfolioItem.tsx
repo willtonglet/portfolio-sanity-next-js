@@ -1,8 +1,12 @@
 import { useState } from 'react';
-import classes from './styles.module.scss';
+import Image from 'next/image';
+
 import { Zoom } from '@components/Icons';
 import PortfolioModal from '@components/PortfolioModal';
+import Spinner from '@components/Spinner';
 import imageResolve from '@core/helpers/imageResolve';
+
+import classes from './styles.module.scss';
 
 const PortfolioItem: React.FC<Portfoliointerface> = (props) => {
     const { title, list, image } = props;
@@ -10,7 +14,15 @@ const PortfolioItem: React.FC<Portfoliointerface> = (props) => {
 
     return (
         <div className={classes.item}>
-            <img src={imageResolve(image as string).url() as string} alt={title} />
+            <Spinner className={classes.spinner} />
+            <Image
+                src={imageResolve(image as string).url() as string}
+                width={420}
+                height={420}
+                layout="responsive"
+                className={classes.image}
+                alt={title}
+            />
             <div className={classes.container}>
                 <button
                     arial-label="Zoom"
