@@ -1,0 +1,18 @@
+$mq: (
+  'mobile': 320px,
+  'tablet': 768px,
+  'tablet-large': 992px,
+  'laptop': 1200px,
+  'desktop': 1366px,
+  'wide': 1920px,
+);
+
+@mixin min-screen($screen-size) {
+  @media (min-width: $screen-size) {
+    @content;
+  }
+}
+
+@function mq($mq-value) {
+  @return map-get($mq, $mq-value);
+}

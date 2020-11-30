@@ -1,0 +1,97 @@
+@import '@styles/mq';
+
+.portfolioIntro {
+    height: 100vh;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .left {
+        order: 2;
+        flex: 1;
+        font-weight: 300;
+        margin: 0 2rem 5rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            display: block;
+        }
+
+        .down {
+            display: block;
+            margin: 3rem 0 0;
+        }
+    }
+
+    .right {
+        order: 1;
+        flex: 1;
+        margin: 0 0 4rem;
+        position: relative;
+        background: url(../../../../public/images/portfolio.webp);
+        background-size: cover;
+
+        .box2 {
+            background-color: rgba(0, 0, 0, 0.75);
+            width: 8rem;
+            height: 8rem;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: -2rem;
+            right: 2rem;
+        }
+    }
+
+    @include min-screen(mq('tablet-large')) {
+        flex-direction: row;
+
+        .left {
+            order: 1;
+            margin: 0 7rem;
+            margin-bottom: 0;
+            line-height: 2rem;
+            font-size: 1.2rem;
+
+            h2 {
+                font-size: 4rem;
+                letter-spacing: -0.2rem;
+            }
+
+            .down {
+                bottom: 7rem;
+                margin: 0;
+                position: absolute;
+                transition: 0.2s ease-in-out;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    bottom: 6.5rem;
+                }
+            }
+        }
+
+        .right {
+            margin: 5rem 0 7rem;
+            order: 2;
+
+            .box2 {
+                width: 12rem;
+                height: 12rem;
+                left: -2rem;
+                right: inherit;
+            }
+        }
+    }
+}

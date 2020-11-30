@@ -1,0 +1,102 @@
+@import '@styles/mq';
+
+.about {
+    height: 100vh;
+    position: relative;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .left {
+        flex: 1;
+        margin: 0 0 4rem;
+        position: relative;
+        background: url(../../../../public/images/sobre.webp) bottom;
+        background-size: 105%;
+
+        .box2 {
+            background-color: rgba(200, 0, 0, 0.75);
+            width: 8rem;
+            height: 8rem;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: -2rem;
+            right: 2rem;
+        }
+    }
+
+    .right {
+        flex: 1;
+        font-weight: 300;
+        color: #ccc;
+        margin: 0 2rem 5rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            display: block;
+        }
+    }
+
+    @include min-screen(mq('tablet-large')) {
+        flex-direction: row;
+
+        .left {
+            margin: 5rem 0 7rem;
+
+            .box2 {
+                width: 12rem;
+                height: 12rem;
+                right: -2rem;
+            }
+        }
+
+        .right {
+            margin: 0 7rem;
+            margin-bottom: 0;
+            line-height: 2rem;
+            font-size: 1.2rem;
+
+            h2 {
+                font-size: 4rem;
+                letter-spacing: -0.2rem;
+            }
+        }
+    }
+
+    .sd {
+        position: absolute;
+        right: 1rem;
+        bottom: 6rem;
+        z-index: 2;
+        color: #fff;
+        transform: rotate(-90deg);
+        transform-origin: right;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 25px;
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100px;
+            height: 1px;
+            background: #fff;
+            right: -110px;
+            bottom: 12px;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff !important;
+        }
+    }
+}

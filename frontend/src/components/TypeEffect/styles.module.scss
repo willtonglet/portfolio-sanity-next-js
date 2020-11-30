@@ -1,0 +1,51 @@
+@import '../../styles/mq.scss';
+
+.typeEffect {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  display: block;
+  letter-spacing: -0.2rem;
+  transition: 0.3s;
+  font-size: 2rem;
+  height: 3rem;
+
+  @include min-screen(mq('tablet')) {
+    font-size: 3.5rem;
+    letter-spacing: -0.25rem;
+    height: auto;
+  }
+
+  @include min-screen(mq('tablet-large')) {
+    font-size: 4.5rem;
+    letter-spacing: -0.3rem;
+    height: auto;
+  }
+
+  &::after {
+    content: '';
+    margin: auto;
+    position: absolute;
+    right: -1rem;
+    top: -3px;
+    width: 5px;
+    height: 100%;
+    background-color: #fff;
+    animation: cursor-animation 1.5s step-end infinite;
+
+    @include min-screen(mq('tablet')) {
+      width: 10px;
+    }
+  }
+  @keyframes cursor-animation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
