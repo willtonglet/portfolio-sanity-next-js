@@ -5,6 +5,7 @@ import { Close } from '../Icons';
 import imageResolve from '@core/helpers/imageResolve';
 
 import classes from './styles.module.scss';
+import Spinner from '@components/Spinner';
 
 interface PortfolioModalProps {
     isOpen?: boolean;
@@ -34,6 +35,7 @@ const PortfolioModal: React.FC<PortfolioModalProps> = (props) => {
                     <Close fill="#fff" width="30" height="30" />
                 </button>
                 <div className={classes.container}>
+                    <Spinner className={classes.spinner} />
                     <div className={classes.image}>
                         <img src={imageResolve(image as string).url() as string} alt={title} />
                     </div>
